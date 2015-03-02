@@ -7,8 +7,6 @@
 #include <map>
 #include <algorithm>
 
-#include "yaml-cpp/yaml.h"
-
 #include "Component.h"
 
 class ComponentManager 
@@ -19,9 +17,6 @@ class ComponentManager
 		
 		Component* getComponent(int id);
 		void addComponent(int id, Component* component);
-		
-		virtual void save(YAML::Node file) = 0;
-		virtual void load(YAML::Node file) = 0;
 		
 		virtual void updateComponents() = 0;
 		
