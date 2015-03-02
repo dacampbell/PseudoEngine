@@ -7,7 +7,7 @@
 #include <map>
 #include <algorithm>
 
-#include "Component.h"
+#include "AssetIO/Component.h"
 
 class ComponentManager 
 {

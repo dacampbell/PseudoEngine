@@ -7,7 +7,7 @@
 #include "SFML/Window.hpp"
 #include "SFML/Graphics.hpp"
 
-#include "Component.h"
+#include "AssetIO/Component.h"
 #include "ComponentManager.h"
 
 class RenderManager : public ComponentManger
