@@ -5,7 +5,7 @@
 #define LOCATION_MANAGER_H
 
 #include "ComponentManager.h"
-#include "AssetIO/LocationComponent.h"
+#include "LocationComponent.h"
 
 class LocationManager : public ComponentManager
 {

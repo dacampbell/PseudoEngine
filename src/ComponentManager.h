@@ -4,10 +4,10 @@
 #ifndef COMPONENTMANAGER_H
 #define COMPONENTMANAGER_H
 
-#include <map>
+#include <unordered_map>
 #include <algorithm>
 
-#include "AssetIO/Component.h"
+#include "Component.h"
 
 class ComponentManager 
 {
@@ -21,7 +21,7 @@ class ComponentManager
 		virtual void updateComponents() = 0;
 		
 	protected:
-		std::map<int, Component*> components;
+		std::unordered_map<int, Component*> components;
 };
 
 #endif
