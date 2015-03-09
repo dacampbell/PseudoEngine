@@ -5,12 +5,17 @@ cmake_minimum_required(VERSION 2.8)
 add_executable(pseudoengine 
 	"src/main.cpp"
 	"src/Engine.cpp"
-	"src/Component.cpp"
+	
 	"src/ComponentManager.cpp"
-	"src/RenderComponent.cpp"
 	"src/RenderManager.cpp"
+	"src/LocationManager.cpp"
+	
+	"src/LoadSystem.cpp"
+	
+	"src/Component.cpp"
+	"src/RenderComponent.cpp"
 	"src/LocationComponent.cpp"
-	"src/LocationManager.cpp")
+	)
 
 set(CMAKE_CXX_FLAGS "-std=c++0x")	
 	
