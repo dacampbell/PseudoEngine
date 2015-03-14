@@ -5,16 +5,6 @@
 
 #include <iostream>
 
-LocationSystem::LocationSystem()
-{
-
-}
-
-LocationSystem::~LocationSystem()
-{
-
-}
-
 void LocationSystem::updateComponents()
 {
 	for(auto temp : components)

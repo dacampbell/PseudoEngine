@@ -1,16 +1,24 @@
-//Level Header File
+//World Header File
 //Created by Duncan Campbell
 
-#ifndef LEVEL_H
-#define LEVEL_H
+#ifndef WORLD_H
+#define WORLD_H
 
-class Level {
+#include <vector>
+
+#include "System.h"
+
+class World {
 	public:
-		Level();
-		~Level();
+		World() {};
+		~World() {};
+		
+		void addSystem(System* system);
+		
+		void updateSystems();
 		
 	private:
-		
+		std::vector<System*> systems;
 };
 
 #endif

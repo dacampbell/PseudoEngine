@@ -1,19 +1,19 @@
 //Component System Header File
 //Create by Duncan Campbell
 
-#ifndef COMPONENT_SYSTEM_H
-#define COMPONENT_SYSTEM_H
+#ifndef SYSTEM_H
+#define SYSTEM_H
 
 #include <unordered_map>
 #include <algorithm>
 
 #include "Component.h"
 
-class ComponentSystem 
+class System 
 {
 	public:
-		ComponentSystem();
-		~ComponentSystem();
+		System();
+		~System();
 		
 		Component* getComponent(int id);
 		void addComponent(int id, Component* component);

@@ -4,14 +4,13 @@
 #ifndef LOCATION_SYSTEM_H
 #define LOCATION_SYSTEM_H
 
-#include "ComponentSystem.h"
+#include "System.h"
 #include "LocationComponent.h"
 
-class LocationSystem : public ComponentSystem
-{
+class LocationSystem : public System {
 	public:
-		LocationSystem();
-		~LocationSystem();
+		LocationSystem() { }
+		~LocationSystem() { }
 		
 		virtual void updateComponents();
 };

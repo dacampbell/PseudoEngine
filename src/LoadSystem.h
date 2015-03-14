@@ -6,7 +6,9 @@
 
 #include "yaml-cpp/yaml.h"
 
-#include "Level.h"
+#include "World.h"
+
+#include "LocationSystem.h"
 
 #include "LocationComponent.h"
 
@@ -14,7 +16,9 @@ class LoadSystem {
 	public:
 		static LocationComponent* loadLocationComponent(YAML::Node node);
 		
-		static Level* loadLevel(YAML::Node node);
+		static LocationSystem* loadLocationSystem(YAML::Node node);
+		
+		static World* loadWorld(YAML::Node node);
 		
 	private:
 		

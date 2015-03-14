@@ -1,24 +1,24 @@
 //Comonent Manager Implementation File
 //Created by Duncan Campbell
 
-#include "ComponentSystem.h"
+#include "System.h"
 
-ComponentSystem::ComponentSystem()
+System::System()
 {
 
 }
 
-ComponentSystem::~ComponentSystem()
+System::~System()
 {
 
 }
 
-Component* ComponentSystem::getComponent(int id)
+Component* System::getComponent(int id)
 {
 	return components.at(id);
 }
 
-void ComponentSystem::addComponent(int id, Component* component)
+void System::addComponent(int id, Component* component)
 {
 	components.insert({id, component});
 }
