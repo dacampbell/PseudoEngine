@@ -1,19 +1,19 @@
-//Component Manager Header File
+//Component System Header File
 //Create by Duncan Campbell
 
-#ifndef COMPONENTMANAGER_H
-#define COMPONENTMANAGER_H
+#ifndef COMPONENT_SYSTEM_H
+#define COMPONENT_SYSTEM_H
 
 #include <unordered_map>
 #include <algorithm>
 
 #include "Component.h"
 
-class ComponentManager 
+class ComponentSystem 
 {
 	public:
-		ComponentManager();
-		~ComponentManager();
+		ComponentSystem();
+		~ComponentSystem();
 		
 		Component* getComponent(int id);
 		void addComponent(int id, Component* component);

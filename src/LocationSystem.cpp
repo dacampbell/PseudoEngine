@@ -1,26 +1,24 @@
 //Location Manager Implementation File
 //Created by Duncan Campbell
 
-#include "LocationManager.h"
+#include "LocationSystem.h"
 
 #include <iostream>
 
-using namespace std;
-
-LocationManager::LocationManager()
+LocationSystem::LocationSystem()
 {
 
 }
 
-LocationManager::~LocationManager()
+LocationSystem::~LocationSystem()
 {
 
 }
 
-void LocationManager::updateComponents()
+void LocationSystem::updateComponents()
 {
 	for(auto temp : components)
 	{
-		cout << ((LocationComponent*)(temp.second))->getX() << " " << ((LocationComponent*)(temp.second))->getY() << endl;
+		std::cout << ((LocationComponent*)(temp.second))->getX() << " " << ((LocationComponent*)(temp.second))->getY() << std::endl;
 	}
 }

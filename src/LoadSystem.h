@@ -6,11 +6,15 @@
 
 #include "yaml-cpp/yaml.h"
 
+#include "Level.h"
+
 #include "LocationComponent.h"
 
 class LoadSystem {
 	public:
 		static LocationComponent* loadLocationComponent(YAML::Node node);
+		
+		static Level* loadLevel(YAML::Node node);
 		
 	private:
 		

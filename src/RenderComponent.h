@@ -1,8 +1,8 @@
 //Render Component Header File
 //Created by Duncan Campbell
 
-#ifndef RENDERCOMPONENT_H
-#define RENDERCOMPONENT_H
+#ifndef RENDER_COMPONENT_H
+#define RENDER_COMPONENT_H
 
 #include "Component.h"
 

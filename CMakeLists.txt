@@ -6,9 +6,9 @@ add_executable(pseudoengine
 	"src/main.cpp"
 	"src/Engine.cpp"
 	
-	"src/ComponentManager.cpp"
-	"src/RenderManager.cpp"
-	"src/LocationManager.cpp"
+	"src/ComponentSystem.cpp"
+	"src/RenderSystem.cpp"
+	"src/LocationSystem.cpp"
 	
 	"src/LoadSystem.cpp"
 	

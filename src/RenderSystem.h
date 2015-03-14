@@ -1,18 +1,17 @@
 //Render Manager Header File
 //Created by Duncan Campbell
 
-#ifndef RENDERMANAGER_H
-#define RENDERMANAGER_H
+#ifndef RENDER_SYSTEM_H
+#define RENDER_SYSTEM_H
 
 #include "SFML/Window.hpp"
 #include "SFML/Graphics.hpp"
 
-#include "AssetIO/Component.h"
-#include "ComponentManager.h"
+#include "Component.h"
+#include "ComponentSystem.h"
 
-class RenderManager : public ComponentManger
-{
+class RenderSystem : public ComponentSystem {
 	
-}
+};
 
 #endif

@@ -1,17 +1,17 @@
 //Location Manager Header File
 //Created by Duncan Campbell
 
-#ifndef LOCATION_MANAGER_H
-#define LOCATION_MANAGER_H
+#ifndef LOCATION_SYSTEM_H
+#define LOCATION_SYSTEM_H
 
-#include "ComponentManager.h"
+#include "ComponentSystem.h"
 #include "LocationComponent.h"
 
-class LocationManager : public ComponentManager
+class LocationSystem : public ComponentSystem
 {
 	public:
-		LocationManager();
-		~LocationManager();
+		LocationSystem();
+		~LocationSystem();
 		
 		virtual void updateComponents();
 };
