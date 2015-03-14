@@ -1,0 +1,5 @@
+name: "Demo Level"
+systems:
+   - name : "Location System"
+     components : "assets/Demo Level Locations.yaml"
+     
