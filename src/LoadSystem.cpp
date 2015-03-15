@@ -7,8 +7,7 @@
 
 using namespace std;
 
-LocationComponent* LoadSystem::loadLocationComponent(YAML::Node node)
-{
+LocationComponent* LoadSystem::loadLocationComponent(YAML::Node node) {
 	int id;
 	float x, y, angle;
 	
@@ -20,8 +19,7 @@ LocationComponent* LoadSystem::loadLocationComponent(YAML::Node node)
 	return new LocationComponent(id, x, y, x);
 }
 
-LocationSystem* LoadSystem::loadLocationSystem(YAML::Node node)
-{
+LocationSystem* LoadSystem::loadLocationSystem(YAML::Node node) {
 	LocationSystem* sys = new LocationSystem();
 	
 	for(auto comp : node) {
@@ -32,8 +30,7 @@ LocationSystem* LoadSystem::loadLocationSystem(YAML::Node node)
 }
 
 
-World* LoadSystem::loadWorld(YAML::Node node)
-{
+World* LoadSystem::loadWorld(YAML::Node node) {
 	//Create a blank world
 	World* world = new World();
 	
