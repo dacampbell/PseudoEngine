@@ -3,6 +3,10 @@
 
 #include "TextureComponent.h"
 
+int TextureComponent::getSheet() {
+	return this->sheet;
+}
+
 int TextureComponent::getTexture() {
 	return this->texture;
 }
@@ -21,6 +25,10 @@ int TextureComponent::getOffsetX() {
 
 int TextureComponent::getOffsetY() {
 	return this->offsetY;
+}
+
+void TextureComponent::setSheet(int sheet) {
+	this->sheet = sheet;
 }
 
 void TextureComponent::setTexture(int texture) {

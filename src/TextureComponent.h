@@ -8,12 +8,14 @@
 
 class TextureComponent {
 	public:
+		int getSheet();
 		int getTexture();
 		int getWidth();
 		int getHeight();
 		int getOffsetX();
 		int getOffsetY();
 		
+		void setSheet(int sheet);
 		void setTexture(int texture);
 		void setWidth(int width);
 		void setHeight(int height);
@@ -21,6 +23,7 @@ class TextureComponent {
 		void setOffsetY(int offsetY);
 		
 	private:
+		int sheet;
 		int texture;
 		int width;
 		int height;
