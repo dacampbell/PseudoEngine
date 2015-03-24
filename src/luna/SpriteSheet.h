@@ -6,6 +6,6 @@
 
 class SpriteSheet {
 		
-}
+};
 
 #endif

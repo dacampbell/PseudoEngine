@@ -3,6 +3,8 @@
 #include "LoadSystem.h"
 #include "World.h"
 
+#include "luna/ViewPort.h"
+
 #include "yaml-cpp/yaml.h"
 
 int main(int argc, char **argv) {
@@ -11,5 +13,7 @@ int main(int argc, char **argv) {
 	
 	world->updateSystems();
 	
-   return 0;
+	Luna::ViewPort* view = new Luna::ViewPort(640, 480);
+		
+	return 0;
 }
