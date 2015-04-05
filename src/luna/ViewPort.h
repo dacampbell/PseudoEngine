@@ -4,10 +4,7 @@
 #ifndef VIEWPORT_H
 #define VIEWPORT_H
 
-#include "SDL2/SDL.h"
-
-#include "TileSheet.h"
-#include "SpriteSheet.h"
+#include "SFML/Window.hpp"
 
 namespace Luna {
 
@@ -16,16 +13,13 @@ namespace Luna {
 			ViewPort(int width, int height);
 			~ViewPort();
 			
-			void drawTile(TileSheet* tileSheet, int tileNum);
-			void drawSprite(SpriteSheet* spriteSheet, int spriteNum);
+			void drawTexture(int sheet, int texture);
 			
 		private:
 			int width;
 			int height;
 			
-			SDL_Window* window;
-			SDL_Surface* screenSurface;
-			SDL_Surface* screenBuffer;
+			sf::Window* window;
 	};
 }
 

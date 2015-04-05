@@ -16,13 +16,17 @@ add_executable(pseudoengine
 	"src/Component.cpp"
 	"src/TextureComponent.cpp"
 	"src/LocationComponent.cpp"
+	
+	"src/luna/TextureManager.cpp"
+	"src/luna/ViewPort.cpp"
+	
 	)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
-set(CMAKE_CXX_FLAGS "-std=c++0x")	
+set(CMAKE_CXX_FLAGS "-std=c++0x")
 
-find_package(SDL2 REQUIRED)
-include_directories(${SDL2_INCLUDE_DIRS})
+find_package(SFML REQUIRED system graphics window)
+include_directories(${SFML_INCLUDE_DIRS})
 
 find_package(LuaBind REQUIRED)
 include_directories(${LUABIND_INCLUDE_DIRS})
@@ -34,8 +38,8 @@ install(TARGETS pseudoengine RUNTIME DESTINATION bin)
 
 target_link_libraries(
     pseudoengine
-    ${SDL2_LIBRARIES}
-    ${LUABIND_LIBRARIES}
-    ${BOX2D_LIBRARIES}
+    ${SFML_LIBRARIES}
+    ${LUABIND_LIBRARY}
+    ${BOX2D_LIBRARY}
     yaml-cpp
     )

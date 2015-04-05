@@ -6,8 +6,6 @@
 
 #include <vector>
 
-#include "SDL2/SDL.h"
-
 #include "System.h"
 
 class TextureSystem : System {

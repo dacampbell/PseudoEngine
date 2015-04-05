@@ -19,14 +19,6 @@ int TextureComponent::getHeight() {
 	return this->height;
 }
 
-int TextureComponent::getOffsetX() {
-	return this->offsetX;
-}
-
-int TextureComponent::getOffsetY() {
-	return this->offsetY;
-}
-
 void TextureComponent::setSheet(int sheet) {
 	this->sheet = sheet;
 }
@@ -41,12 +33,4 @@ void TextureComponent::setWidth(int width) {
 
 void TextureComponent::setHeight(int height) {
 	this->height = height;
-}
-
-void TextureComponent::setOffsetX(int offsetX) {
-	this->offsetX = offsetX;
-}
-
-void TextureComponent::setOffsetY(int offsetY) {
-	this->offsetY = offsetY;
 }

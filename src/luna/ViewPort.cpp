@@ -1,11 +1,10 @@
 //View Port Implementation File
 //Created by Duncan Campbell
 
-#include "SDL2/SDL.h"
+#include "SFML/Window.hpp"
+#include "SFML/Graphics.hpp"
 
 #include "ViewPort.h"
-#include "TileSheet.h"
-#include "SpriteSheet.h"
 
 namespace Luna {
 	ViewPort::ViewPort(int width, int height) {
@@ -13,14 +12,16 @@ namespace Luna {
 		this->width = width;
 		this->height = height;
 		
-		//Initialize the base SDL window and initialize SDL
-		SDL_Init(SDL_INIT_VIDEO);
-		this->window = SDL_CreateWindow("PseudoEngine", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, height, width, SDL_WINDOW_OPENGL);
-		this->screenSurface = SDL_GetWindowSurface(this->window);
+		//Initialize the base SFML Window
+		window = new sf::Window(sf::VideoMode(width, height), "PsuedoEngine");
 	}
 	
 	ViewPort::~ViewPort() {
 		//Destroy the window
-		SDL_DestroyWindow(this->window);
+		delete window;
+	}
+	
+	void ViewPort::ViewPort::drawTexture(int sheet, int texture) {
+	
 	}
 }

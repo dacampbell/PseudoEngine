@@ -13,7 +13,9 @@ int main(int argc, char **argv) {
 	
 	world->updateSystems();
 	
-	Luna::ViewPort* view = new Luna::ViewPort(640, 480);
+	Luna::ViewPort* view = new Luna::ViewPort(800, 600);
+	
+	while(1);
 		
 	return 0;
 }
