@@ -6,23 +6,23 @@
 
 #include "Component.h"
 
-class TextureComponent {
+class TextureComponent : public Component {
 	public:
+		TextureComponent(int id, int sheet, int textureX, int textureY) : Component(id), sheet(sheet), textureX(textureX), textureY(textureY) {}
+		~TextureComponent() {}
+		
 		int getSheet();
-		int getTexture();
-		int getWidth();
-		int getHeight();
+		int getTextureX();
+		int getTextureY();
 		
 		void setSheet(int sheet);
-		void setTexture(int texture);
-		void setWidth(int width);
-		void setHeight(int height);
+		void setTextureX(int textureX);
+		void setTextureY(int textureY);
 		
 	private:
 		int sheet;
-		int texture;
-		int width;
-		int height;
+		int textureX;
+		int textureY;
 };
 
 #endif

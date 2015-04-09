@@ -7,30 +7,22 @@ int TextureComponent::getSheet() {
 	return this->sheet;
 }
 
-int TextureComponent::getTexture() {
-	return this->texture;
+int TextureComponent::getTextureX() {
+	return this->textureX;
 }
 
-int TextureComponent::getWidth() {
-	return this->width;
-}
-
-int TextureComponent::getHeight() {
-	return this->height;
+int TextureComponent::getTextureY() {
+	return this->textureY;
 }
 
 void TextureComponent::setSheet(int sheet) {
 	this->sheet = sheet;
 }
 
-void TextureComponent::setTexture(int texture) {
-	this->texture = texture;
+void TextureComponent::setTextureX(int textureX) {
+	this->textureX = textureX;
 }
 
-void TextureComponent::setWidth(int width) {
-	this->width = width;
-}
-
-void TextureComponent::setHeight(int height) {
-	this->height = height;
+void TextureComponent::setTextureY(int textureY) {
+	this->textureY = textureY;
 }

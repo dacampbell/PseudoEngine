@@ -2,4 +2,9 @@ name: "Demo Level"
 systems:
    - name : "Location System"
      components : "assets/Demo Level Locations.yaml"
+   - name : "Texture System"
+     components : "assets/Demo Level Textures.yaml"
+managers:
+   - name : "Texture Manager"
+     assets : "assets/Demo Level Texture Files.yaml"
      

@@ -18,6 +18,8 @@ class System
 		Component* getComponent(int id);
 		void addComponent(int id, Component* component);
 		
+		std::unordered_map<int, Component*>* getComponents();
+		
 		virtual void updateComponents() = 0;
 		
 	protected:

@@ -5,6 +5,7 @@
 #include "SFML/Graphics.hpp"
 
 #include "ViewPort.h"
+#include "TextureManager.h"
 
 namespace Luna {
 	ViewPort::ViewPort(int width, int height) {
@@ -13,7 +14,7 @@ namespace Luna {
 		this->height = height;
 		
 		//Initialize the base SFML Window
-		window = new sf::Window(sf::VideoMode(width, height), "PsuedoEngine");
+		window = new sf::RenderWindow(sf::VideoMode(width, height), "PsuedoEngine");
 	}
 	
 	ViewPort::~ViewPort() {
@@ -21,7 +22,26 @@ namespace Luna {
 		delete window;
 	}
 	
-	void ViewPort::ViewPort::drawTexture(int sheet, int texture) {
+	void ViewPort::drawTexture(int x, int y, int sheet, int textureX, int textureY) {		
+		sf::Sprite sprite = textureManager->getTexture(sheet, textureX, textureY);
+		sprite.move(sf::Vector2f(x, y));
+		window->draw(sprite);
+	}
 	
+	void ViewPort::display() {
+		this->window->display();
+	}
+	
+	void ViewPort::clear() {
+		this->window->clear();
+	}
+	
+	TextureManager*  ViewPort::getTextureManager() {
+		return this->textureManager;
+	}
+	
+	void ViewPort::setTextureManager(TextureManager* textureManager) {
+		delete this->textureManager;
+		this->textureManager = textureManager;
 	}
 }

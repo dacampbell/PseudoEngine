@@ -2,8 +2,12 @@
 //Created by Duncan Campbell
 
 #include <vector>
+#include <deque>
 
 #include "SFML/Graphics.hpp"
+
+#ifndef LUNA_TEXTURE_MANAGER
+#define LUNA_TEXTURE_MANAGER
 
 namespace Luna {
 	
@@ -12,9 +16,15 @@ namespace Luna {
 			TextureManager();
 			~TextureManager();
 			
-			sf::Sprite* getTexture(int sheet, int texture);
+			void addSheet(sf::Texture texture);
+			
+			sf::Sprite getTexture(int sheet, int textureX, int textureY);
 			
 		private:
-			std::vector<sf::Texture*> sheets;
+			std::vector<sf::Sprite> sheetSprites;
+			std::deque<sf::Texture> sheets;
 	};
+	
 }
+
+#endif

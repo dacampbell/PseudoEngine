@@ -1,13 +1,31 @@
 //World Implementation File
 //Created by Duncan Campbell
 
-#include "World.h"
+#include <map>
+#include <string>
 
-void World::addSystem(System* system) {
-	this->systems.push_back(system);
+#include "World.h"
+#include "System.h"
+
+void World::addSystem(std::string name, System* system) {
+	this->systems.emplace(name, system);
+}
+
+System* World::getSystem(std::string systemName) {
+	return this->systems.at(systemName);
 }
 
 void World::updateSystems() {
 	for(auto sys : this->systems)
-		sys->updateComponents();
+		sys.second->updateComponents();
+}
+
+Luna::TextureManager* World::getTextureManager()
+{
+	return this->manager;
+}
+
+void World::setTextureManager(Luna::TextureManager* textureManager)
+{
+	this->manager = textureManager;
 }

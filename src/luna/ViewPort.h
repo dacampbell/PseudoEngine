@@ -1,10 +1,12 @@
 //View Port Header File
 //Created by Duncan Campbell
 
-#ifndef VIEWPORT_H
-#define VIEWPORT_H
+#ifndef LUNA_VIEW_PORT_H
+#define LUNA_VIEW_PORT_H
 
-#include "SFML/Window.hpp"
+#include "SFML/Graphics.hpp"
+
+#include "TextureManager.h"
 
 namespace Luna {
 
@@ -13,13 +15,22 @@ namespace Luna {
 			ViewPort(int width, int height);
 			~ViewPort();
 			
-			void drawTexture(int sheet, int texture);
+			void drawTexture(int x, int y, int sheet, int textureX, int textureY);
+			
+			void display();
+			void clear();
+			
+			TextureManager* getTextureManager();
+			
+			void setTextureManager(TextureManager* textureManager);
 			
 		private:
 			int width;
 			int height;
 			
-			sf::Window* window;
+			sf::RenderWindow* window;
+			
+			TextureManager* textureManager;
 	};
 }
 

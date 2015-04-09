@@ -3,3 +3,6 @@
 
 #include "TextureSystem.h"
 
+void TextureSystem::updateComponents() {
+
+}

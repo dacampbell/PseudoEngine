@@ -8,10 +8,12 @@
 
 #include "System.h"
 
-class TextureSystem : System {
+class TextureSystem : public System {
 	public:
+		TextureSystem() { }
+		~TextureSystem() { }
 		
-	private:
+		virtual void updateComponents();
 };
 
 #endif
