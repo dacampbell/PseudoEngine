@@ -12,24 +12,24 @@ namespace Luna {
 
 	class ViewPort {
 		public:
-			ViewPort(int width, int height);
+			ViewPort(int width, int height, TextureManager* textureManager);
 			~ViewPort();
-			
+
 			void drawTexture(int x, int y, int sheet, int textureX, int textureY);
-			
+
 			void display();
 			void clear();
-			
+
 			TextureManager* getTextureManager();
-			
+
 			void setTextureManager(TextureManager* textureManager);
-			
+
 		private:
 			int width;
 			int height;
-			
+
 			sf::RenderWindow* window;
-			
+
 			TextureManager* textureManager;
 	};
 }
