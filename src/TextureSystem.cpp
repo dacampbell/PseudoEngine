@@ -19,7 +19,19 @@ void TextureSystem::updateSystem() {
 	for(auto item : *(this->getComponents())) {
 		TextureComponent* comp = (TextureComponent*)item.second;
 		LocationComponent* loc = (LocationComponent*)Engine::world->getSystem("Location System")->getComponent(comp->getId());
-		this->viewport->drawTexture(loc->getX() + Engine::camera->getX(), loc->getY() + Engine::camera->getY(), comp->getSheet(), comp->getTextureX(), comp->getTextureY());
+
+		int locX = loc->getX();
+		int locY = loc->getY();
+		int camX = Engine::camera->getX();
+		int camY = Engine::camera->getY();
+		int camW = Engine::camera->getWidth();
+		int camH = Engine::camera->getHeight();
+
+		if(locX > camX && locX < camX + camW &&
+			 locY > camY && locY < camY + camH) {
+				this->viewport->drawTexture(locX - camX, locY - camY, comp->getSheet(), comp->getTextureX(), comp->getTextureY());
+		}
+
 	}
 
 	this->viewport->display();
