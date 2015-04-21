@@ -12,7 +12,8 @@ class LocationSystem : public System {
 		LocationSystem() { }
 		~LocationSystem() { }
 		
-		virtual void updateComponents();
+		virtual void initSystem();
+		virtual void updateSystem();
 };
 
 #endif

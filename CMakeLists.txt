@@ -6,6 +6,7 @@ add_executable(pseudoengine
 	"src/main.cpp"
 	"src/Engine.cpp"
 	"src/World.cpp"
+	"src/Camera.cpp"
 	
 	"src/System.cpp"
 	"src/LocationSystem.cpp"

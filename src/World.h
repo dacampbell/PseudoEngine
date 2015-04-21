@@ -22,7 +22,8 @@ class World {
 		Luna::TextureManager* getTextureManager();
 		void setTextureManager(Luna::TextureManager* textureManager);
 		
-		void updateSystems();
+		void initWorld();
+		void updateWorld();
 		
 	private:
 		std::map<std::string, System*> systems;

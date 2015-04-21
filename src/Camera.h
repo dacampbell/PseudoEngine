@@ -9,26 +9,25 @@
 
 class Camera {
 	public:
-		Camera(World* world, int x, int y, int width, int height);
+		Camera(int x, int y, int width, int height);
 		~Camera();
 		
 		int getX();
 		int getY();
-		Luna::ViewPort* getViewPort();
+		int getWidth();
+		int getHeight();
 		
 		void setX(int x);
 		void setY(int y);
-		void setWorld(World* world);
-		
-		void updateCamera();
+		void setWidth(int width);
+		void setHeight(int height);
 		
 	private:
-		Luna::ViewPort* viewport;
-		World* world;
 		
 		int x; 
 		int y;
-		
+		int width;
+		int height;
 };
 
 #endif

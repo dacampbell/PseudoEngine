@@ -20,7 +20,8 @@ class System
 		
 		std::unordered_map<int, Component*>* getComponents();
 		
-		virtual void updateComponents() = 0;
+		virtual void initSystem() = 0;
+		virtual void updateSystem() = 0;
 		
 	protected:
 		std::unordered_map<int, Component*> components;

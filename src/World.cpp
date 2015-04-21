@@ -15,9 +15,14 @@ System* World::getSystem(std::string systemName) {
 	return this->systems.at(systemName);
 }
 
-void World::updateSystems() {
+void World::updateWorld() {
 	for(auto sys : this->systems)
-		sys.second->updateComponents();
+		sys.second->updateSystem();
+}
+
+void World::initWorld() {
+	for(auto sys : this->systems)
+		sys.second->initSystem();
 }
 
 Luna::TextureManager* World::getTextureManager()

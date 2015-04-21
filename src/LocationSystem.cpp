@@ -5,7 +5,11 @@
 
 #include <iostream>
 
-void LocationSystem::updateComponents()
+void LocationSystem::initSystem() {
+	
+}
+
+void LocationSystem::updateSystem()
 {
 	for(auto temp : components)
 	{
