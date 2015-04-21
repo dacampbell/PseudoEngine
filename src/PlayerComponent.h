@@ -8,8 +8,10 @@
 
 class PlayerComponent : public Component {
   public:
-
+    PlayerComponent(int id) : Component(id) {}
+    ~PlayerComponent();
+    
   private:
-}
+};
 
 #endif

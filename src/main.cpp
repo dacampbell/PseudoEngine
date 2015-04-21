@@ -12,7 +12,7 @@
 int main(int argc, char **argv) {
 
 	Engine::world = LoadSystem::loadWorld(YAML::LoadFile("assets/Demo Level.yaml"));
-	Engine::camera = new Camera( 0, 0, 800, 600);
+	Engine::camera = new Camera( -100, -100, 800, 600);
 
 	Engine::init();
 	while(1) {

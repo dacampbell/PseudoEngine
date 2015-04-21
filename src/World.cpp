@@ -27,10 +27,18 @@ void World::initWorld() {
 
 Luna::TextureManager* World::getTextureManager()
 {
-	return this->manager;
+	return this->textureManager;
 }
 
 void World::setTextureManager(Luna::TextureManager* textureManager)
 {
-	this->manager = textureManager;
+	this->textureManager = textureManager;
+}
+
+Luna::InputManager* World::getInputManager() {
+	return this->inputManager;
+}
+
+void World::setInputManager(Luna::InputManager* inputManager) {
+	this->inputManager = inputManager;
 }

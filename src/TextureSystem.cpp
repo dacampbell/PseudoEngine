@@ -19,7 +19,7 @@ void TextureSystem::updateSystem() {
 	for(auto item : *(this->getComponents())) {
 		TextureComponent* comp = (TextureComponent*)item.second;
 		LocationComponent* loc = (LocationComponent*)Engine::world->getSystem("Location System")->getComponent(comp->getId());
-		this->viewport->drawTexture(loc->getX(), loc->getY(), comp->getSheet(), comp->getTextureX(), comp->getTextureY());
+		this->viewport->drawTexture(loc->getX() + Engine::camera->getX(), loc->getY() + Engine::camera->getY(), comp->getSheet(), comp->getTextureX(), comp->getTextureY());
 	}
 
 	this->viewport->display();
