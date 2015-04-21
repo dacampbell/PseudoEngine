@@ -2,25 +2,28 @@ project(pseudoengine)
 
 cmake_minimum_required(VERSION 2.8)
 
-add_executable(pseudoengine 
+add_executable(pseudoengine
 	"src/main.cpp"
 	"src/Engine.cpp"
 	"src/World.cpp"
 	"src/Camera.cpp"
-	
+
 	"src/System.cpp"
 	"src/LocationSystem.cpp"
 	"src/TextureSystem.cpp"
-	
+	"src/PlayerSystem.cpp"
+
 	"src/LoadSystem.cpp"
-	
+
 	"src/Component.cpp"
 	"src/TextureComponent.cpp"
 	"src/LocationComponent.cpp"
-	
+	"src/PlayerComponent.cpp"
+
 	"src/luna/TextureManager.cpp"
 	"src/luna/ViewPort.cpp"
-	
+	"src/luna/InputManager.cpp"
+
 	)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
