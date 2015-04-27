@@ -27,8 +27,8 @@ void TextureSystem::updateSystem() {
 		int camW = Engine::camera->getWidth();
 		int camH = Engine::camera->getHeight();
 
-		if(locX > camX && locX < camX + camW &&
-			 locY > camY && locY < camY + camH) {
+		if(locX > camX-32 && locX < camX + camW &&
+			 locY > camY-32 && locY < camY + camH) {
 				this->viewport->drawTexture(locX - camX, locY - camY, comp->getSheet(), comp->getTextureX(), comp->getTextureY());
 		}
 

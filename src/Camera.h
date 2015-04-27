@@ -11,20 +11,20 @@ class Camera {
 	public:
 		Camera(int x, int y, int width, int height);
 		~Camera();
-		
+
 		int getX();
 		int getY();
 		int getWidth();
 		int getHeight();
-		
+
 		void setX(int x);
 		void setY(int y);
 		void setWidth(int width);
 		void setHeight(int height);
-		
+
 	private:
-		
-		int x; 
+
+		int x;
 		int y;
 		int width;
 		int height;
