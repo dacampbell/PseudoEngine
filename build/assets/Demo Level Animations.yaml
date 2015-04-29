@@ -1,0 +1,11 @@
+- id : 2500
+  startFrame : 0
+  frames :
+  - sheet : 1
+    textureX : 0
+    textureY : 0
+    frameDuration : 30
+  - sheet : 1
+    textureX : 1
+    textureY : 0
+    frameDuration : 30

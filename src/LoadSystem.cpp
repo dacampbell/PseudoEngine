@@ -7,6 +7,8 @@
 
 #include "SFML/Graphics.hpp"
 
+using namespace std;
+
 LocationComponent* LoadSystem::loadLocationComponent(YAML::Node node) {
 	int id;
 	float x, y, angle;
@@ -42,6 +44,31 @@ PlayerComponent* LoadSystem::loadPlayerComponent(YAML::Node node) {
 	return new PlayerComponent(id);
 }
 
+AnimationComponent* LoadSystem::loadAnimationComponent(YAML::Node node) {
+	int id;
+	int startFrame;
+
+	id = node["id"].as<int>();
+	startFrame = node["startFrame"].as<int>();
+
+	vector<Frame> animations;
+
+	for(auto frame : node["frames"]) {
+		Frame animation;
+
+		animation.sheet = frame["sheet"].as<int>();
+		animation.textureX = frame["textureX"].as<int>();
+		animation.textureY = frame["textureY"].as<int>();
+		animation.frameDuration = frame["frameDuration"].as<int>();
+
+		animations.push_back(animation);
+	}
+
+	//cout << animations.size() << endl;
+
+	return new AnimationComponent(id, startFrame, animations);
+}
+
 
 LocationSystem* LoadSystem::loadLocationSystem(YAML::Node node) {
 	LocationSystem* sys = new LocationSystem();
@@ -73,6 +100,16 @@ PlayerSystem* LoadSystem::loadPlayerSystem(YAML::Node node) {
 	return sys;
 }
 
+AnimationSystem* LoadSystem::loadAnimationSystem(YAML::Node node) {
+	AnimationSystem* sys = new AnimationSystem();
+
+	for(auto comp : node) {
+		sys->addComponent(loadAnimationComponent(comp)->getId(), loadAnimationComponent(comp));
+	}
+
+	return sys;
+}
+
 World* LoadSystem::loadWorld(YAML::Node node) {
 	//Create a blank world
 	World* world = new World();
@@ -94,6 +131,9 @@ World* LoadSystem::loadWorld(YAML::Node node) {
 		}
 		else if(systemName == "Player System") {
 			world->addSystem(systemName, loadPlayerSystem(YAML::LoadFile(sys["components"].as<std::string>())));
+		}
+		else if(systemName == "Animation System") {
+			world->addSystem(systemName, loadAnimationSystem(YAML::LoadFile(sys["components"].as<std::string>())));
 		}
 	}
 

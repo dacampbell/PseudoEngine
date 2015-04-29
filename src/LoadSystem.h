@@ -11,10 +11,12 @@
 #include "LocationSystem.h"
 #include "TextureSystem.h"
 #include "PlayerSystem.h"
+#include "AnimationSystem.h"
 
 #include "LocationComponent.h"
 #include "TextureComponent.h"
 #include "PlayerComponent.h"
+#include "AnimationComponent.h"
 
 #include "TextureManager.h"
 #include "InputManager.h"
@@ -24,10 +26,12 @@ class LoadSystem {
 		static LocationComponent* loadLocationComponent(YAML::Node node);
 		static TextureComponent* loadTextureComponent(YAML::Node node);
 		static PlayerComponent* loadPlayerComponent(YAML::Node node);
+		static AnimationComponent* loadAnimationComponent(YAML::Node node);
 
 		static LocationSystem* loadLocationSystem(YAML::Node node);
 		static TextureSystem* loadTextureSystem(YAML::Node node);
 		static PlayerSystem* loadPlayerSystem(YAML::Node node);
+		static AnimationSystem* loadAnimationSystem(YAML::Node node);
 
 		static World* loadWorld(YAML::Node node);
 

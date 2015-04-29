@@ -12,6 +12,7 @@ add_executable(pseudoengine
 	"src/LocationSystem.cpp"
 	"src/TextureSystem.cpp"
 	"src/PlayerSystem.cpp"
+	"src/AnimationSystem.cpp"
 
 	"src/LoadSystem.cpp"
 
@@ -19,10 +20,11 @@ add_executable(pseudoengine
 	"src/TextureComponent.cpp"
 	"src/LocationComponent.cpp"
 	"src/PlayerComponent.cpp"
+	"src/AnimationComponent.cpp"
 
-	"src/luna/TextureManager.cpp"
-	"src/luna/ViewPort.cpp"
-	"src/luna/InputManager.cpp"
+	"src/TextureManager.cpp"
+	"src/ViewPort.cpp"
+	"src/InputManager.cpp"
 
 	)
 

@@ -6,6 +6,8 @@ systems:
      components : "assets/Sample Levels/Demo Map Texture Components.yaml"
    - name : "Player System"
      components : "assets/Demo Level Players.yaml"
+   - name : "Animation System"
+     components : "assets/Demo Level Animations.yaml"
 managers:
    - name : "Texture Manager"
      assets : "assets/Demo Level Texture Files.yaml"

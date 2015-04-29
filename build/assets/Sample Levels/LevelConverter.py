@@ -28,8 +28,9 @@ for y in range(0, mapHeight):
         locationData.append({'id' : entityId,
                              'x' : xCord,
                              'y' : yCord,
-                             'angle' : 0.0})
-                             
+                             'angle' : 0.0,
+                             'layer' : 0})
+
 yaml.dump(locationData, file('Demo Map Location Components.yaml', 'w'))
 
 textureData = list()
@@ -38,18 +39,18 @@ objId = 0
 
 for child in node:
     tileNum = int(child.attrib['gid'])
-    
+
     if(tileNum % 16 == 0):
         texX = 15
         texY = tileNum / 16 - 1
     else:
         texX = (tileNum % 16) - 1
         texY = tileNum / 16
-        
+
     textureData.append({'id' : objId,
                         'sheet' : 0,
                         'textureX' : texX,
                         'textureY' : texY})
     objId += 1
-                        
+
 yaml.dump(textureData, file('Demo Map Texture Components.yaml', 'w'))
