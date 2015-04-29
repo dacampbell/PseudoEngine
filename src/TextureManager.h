@@ -6,8 +6,8 @@
 
 #include "SFML/Graphics.hpp"
 
-#ifndef LUNA_TEXTURE_MANAGER
-#define LUNA_TEXTURE_MANAGER
+#ifndef TEXTURE_MANAGER
+#define TEXTURE_MANAGER
 
 class TextureManager {
 	public:

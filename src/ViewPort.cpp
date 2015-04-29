@@ -15,6 +15,8 @@ ViewPort::ViewPort(int width, int height, TextureManager* textureManager) {
 	//Initialize the base SFML Window
 	window = new sf::RenderWindow(sf::VideoMode(width, height), "PsuedoEngine");
 
+	window->setFramerateLimit(60);
+	
 	//Assign the texture maanager
 	this->textureManager = textureManager;
 }

@@ -25,20 +25,20 @@ void World::initWorld() {
 		sys.second->initSystem();
 }
 
-Luna::TextureManager* World::getTextureManager()
+TextureManager* World::getTextureManager()
 {
 	return this->textureManager;
 }
 
-void World::setTextureManager(Luna::TextureManager* textureManager)
+void World::setTextureManager(TextureManager* textureManager)
 {
 	this->textureManager = textureManager;
 }
 
-Luna::InputManager* World::getInputManager() {
+InputManager* World::getInputManager() {
 	return this->inputManager;
 }
 
-void World::setInputManager(Luna::InputManager* inputManager) {
+void World::setInputManager(InputManager* inputManager) {
 	this->inputManager = inputManager;
 }

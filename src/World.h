@@ -8,8 +8,8 @@
 #include <string>
 
 #include "System.h"
-#include "luna/TextureManager.h"
-#include "luna/InputManager.h"
+#include "TextureManager.h"
+#include "InputManager.h"
 
 class World {
 	public:
@@ -20,19 +20,19 @@ class World {
 
 		System* getSystem(std::string systemName);
 
-		Luna::TextureManager* getTextureManager();
-		void setTextureManager(Luna::TextureManager* textureManager);
+		TextureManager* getTextureManager();
+		void setTextureManager(TextureManager* textureManager);
 
-		Luna::InputManager* getInputManager();
-		void setInputManager(Luna::InputManager* inputManager);
+		InputManager* getInputManager();
+		void setInputManager(InputManager* inputManager);
 
 		void initWorld();
 		void updateWorld();
 
 	private:
 		std::map<std::string, System*> systems;
-		Luna::TextureManager* textureManager;
-		Luna::InputManager* inputManager;
+		TextureManager* textureManager;
+		InputManager* inputManager;
 };
 
 #endif

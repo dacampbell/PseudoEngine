@@ -5,8 +5,6 @@
 #include "Camera.h"
 #include "Engine.h"
 
-#include "luna/ViewPort.h"
-
 #include "yaml-cpp/yaml.h"
 
 int main(int argc, char **argv) {

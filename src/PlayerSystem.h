@@ -5,7 +5,7 @@
 #define PLAYER_SYSTEM_H
 
 #include "System.h"
-#include "luna/InputManager.h"
+#include "InputManager.h"
 #include "PlayerComponent.h"
 
 class PlayerSystem : public System {

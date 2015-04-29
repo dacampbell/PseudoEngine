@@ -7,21 +7,21 @@
 #include <vector>
 
 #include "System.h"
-#include "luna/TextureManager.h"
-#include "luna/ViewPort.h"
+#include "TextureManager.h"
+#include "ViewPort.h"
 
 
 class TextureSystem : public System {
 	public:
 		TextureSystem() { }
 		~TextureSystem() { }
-		
+
 		virtual void initSystem();
 
 		virtual void updateSystem();
-		
+
 	private:
-		Luna::ViewPort* viewport;
+		ViewPort* viewport;
 };
 
 #endif

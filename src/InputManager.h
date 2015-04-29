@@ -1,8 +1,8 @@
 //Input Manager header file
 //Created by Duncan Campbell
 
-#ifndef LUNA_INPUT_MANAGER_H
-#define LUNA_INPUT_MANAGER_H
+#ifndef INPUT_MANAGER_H
+#define INPUT_MANAGER_H
 
 enum Event {NONE, UP_ARROW, DOWN_ARROW, RIGHT_ARROW, LEFT_ARROW};
 

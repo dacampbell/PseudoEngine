@@ -7,18 +7,18 @@
 
 #include "SFML/Graphics.hpp"
 
-using namespace std;
-
 LocationComponent* LoadSystem::loadLocationComponent(YAML::Node node) {
 	int id;
 	float x, y, angle;
+	int layer;
 
 	id = node["id"].as<int>();
 	x = node["x"].as<float>();
 	y = node["y"].as<float>();
 	angle = node["angle"].as<float>();
+	layer = node["layer"].as<int>();
 
-	return new LocationComponent(id, x, y, x);
+	return new LocationComponent(id, x, y, angle, layer);
 }
 
 TextureComponent* LoadSystem::loadTextureComponent(YAML::Node node) {
@@ -112,9 +112,9 @@ World* LoadSystem::loadWorld(YAML::Node node) {
 	return world;
 }
 
-Luna::TextureManager* LoadSystem::loadTextureManager(YAML::Node node) {
+TextureManager* LoadSystem::loadTextureManager(YAML::Node node) {
 	//Create a texture manager
-	Luna::TextureManager* manager = new Luna::TextureManager();
+	TextureManager* manager = new TextureManager();
 
 	for(auto texture : node) {
 		std::string filename = texture["filename"].as<std::string>();
@@ -128,8 +128,8 @@ Luna::TextureManager* LoadSystem::loadTextureManager(YAML::Node node) {
 	return manager;
 }
 
-Luna::InputManager* LoadSystem::loadInputManager() {
-	Luna::InputManager* inputManager = new Luna::InputManager();
+InputManager* LoadSystem::loadInputManager() {
+	InputManager* inputManager = new InputManager();
 
 	return inputManager;
 }

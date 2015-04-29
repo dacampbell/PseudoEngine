@@ -18,6 +18,10 @@ float LocationComponent::getY()
 	return this->y;
 }
 
+int LocationComponent::getLayer() {
+	return this->layer;
+}
+
 void LocationComponent::setAngle(float angle)
 {
 	this->angle = angle;
@@ -33,3 +37,6 @@ void LocationComponent::setY(float y)
 	this->y = y;
 }
 
+void LocationComponent::setLayer(int layer) {
+	this->layer = layer;
+}

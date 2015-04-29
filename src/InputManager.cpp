@@ -6,7 +6,7 @@
 #include "SFML/System.hpp"
 #include "SFML/Window.hpp"
 
-Key InputManager::getKeyPressed() {
+Event InputManager::getKeyPressed() {
   if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
     return UP_ARROW;
   }

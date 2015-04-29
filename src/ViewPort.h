@@ -1,8 +1,8 @@
 //View Port Header File
 //Created by Duncan Campbell
 
-#ifndef LUNA_VIEW_PORT_H
-#define LUNA_VIEW_PORT_H
+#ifndef VIEW_PORT_H
+#define VIEW_PORT_H
 
 #include "SFML/Graphics.hpp"
 

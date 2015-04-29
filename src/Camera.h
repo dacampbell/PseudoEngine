@@ -4,7 +4,6 @@
 #ifndef CAMERA_H
 #define CAMERA_H
 
-#include "luna/ViewPort.h"
 #include "World.h"
 
 class Camera {

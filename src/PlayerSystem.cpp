@@ -4,7 +4,7 @@
 #include "PlayerSystem.h"
 
 #include "Engine.h"
-#include "luna/InputManager.h"
+#include "InputManager.h"
 
 
 void PlayerSystem::initSystem() {
@@ -19,14 +19,14 @@ void PlayerSystem::updateSystem() {
     int cameraY = Engine::camera->getY();
 
     switch(Engine::world->getInputManager()->getKeyPressed()) {
-      case Luna::UP_ARROW   : cameraY -= 1;
-                                  break;
-      case Luna::DOWN_ARROW : cameraY += 1;
-                                  break;
-      case Luna::RIGHT_ARROW: cameraX += 1;
-                                  break;
-      case Luna::LEFT_ARROW : cameraX -= 1;
-                                  break;
+      case UP_ARROW   : cameraY -= 1;
+                        break;
+      case DOWN_ARROW : cameraY += 1;
+                        break;
+      case RIGHT_ARROW: cameraX += 1;
+                        break;
+      case LEFT_ARROW : cameraX -= 1;
+                        break;
     }
 
     Engine::camera->setX(cameraX);

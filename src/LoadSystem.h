@@ -16,8 +16,8 @@
 #include "TextureComponent.h"
 #include "PlayerComponent.h"
 
-#include "luna/TextureManager.h"
-#include "luna/InputManager.h"
+#include "TextureManager.h"
+#include "InputManager.h"
 
 class LoadSystem {
 	public:
@@ -31,8 +31,8 @@ class LoadSystem {
 
 		static World* loadWorld(YAML::Node node);
 
-		static Luna::TextureManager* loadTextureManager(YAML::Node node);
-		static Luna::InputManager* loadInputManager();
+		static TextureManager* loadTextureManager(YAML::Node node);
+		static InputManager* loadInputManager();
 
 	private:
 
