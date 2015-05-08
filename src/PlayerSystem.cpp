@@ -22,20 +22,20 @@ void PlayerSystem::updateSystem() {
     int y = loc->getY();
 
     switch(Engine::world->getInputManager()->getKeyPressed()) {
-      case UP_ARROW   : y -= 3;
+      case UP_ARROW   : y -= 5;
                         break;
-      case DOWN_ARROW : y += 3;
+      case DOWN_ARROW : y += 5;
                         break;
-      case RIGHT_ARROW: x += 3;
+      case RIGHT_ARROW: x += 5;
                         break;
-      case LEFT_ARROW : x -= 3;
+      case LEFT_ARROW : x -= 5;
                         break;
     }
 
     loc->setX(x);
     loc->setY(y);
 
-    Engine::camera->setX(x - Engine::camera->getWidth() / 2);
-	  Engine::camera->setY(y - Engine::camera->getHeight() / 2);
+    Engine::camera->setTargetX(x - Engine::camera->getWidth() / 2);
+	  Engine::camera->setTargetY(y - Engine::camera->getHeight() / 2);
   }
 }

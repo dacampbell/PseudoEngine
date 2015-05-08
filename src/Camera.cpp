@@ -8,10 +8,12 @@ Camera::Camera(int x, int y, int width, int height) {
 	this->y = y;
 	this->width = width;
 	this->height = height;
+	this->targetX = x;
+	this->targetY = y;
 }
 
 Camera::~Camera() {
-	
+
 }
 
 int Camera::getX() {
@@ -20,6 +22,14 @@ int Camera::getX() {
 
 int Camera::getY() {
 	return this->y;
+}
+
+int Camera::getTargetX() {
+	return this->targetX;
+}
+
+int Camera::getTargetY() {
+	return this->targetY;
 }
 
 int Camera::getWidth() {
@@ -38,6 +48,14 @@ void Camera::setY(int y) {
 	this->y = y;
 }
 
+void Camera::setTargetX(int targetX) {
+	this->targetX = targetX;
+}
+
+void Camera::setTargetY(int targetY) {
+	this->targetY = targetY;
+}
+
 void Camera::setWidth(int width) {
 	this->width = width;
 }
@@ -46,4 +64,20 @@ void Camera::setHeight(int height) {
 	this->height = height;
 }
 
+void Camera::updateCamera() {
+	const int interval = 3;
 
+	if(x > targetX + interval) {
+		x -= interval;
+	}
+	else if(x < targetX - interval) {
+		x += interval;
+	}
+
+	if(y > targetY + interval) {
+		y -= interval;
+	}
+	else if(y < targetY - interval) {
+		y += interval;
+	}
+}

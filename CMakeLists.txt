@@ -40,11 +40,15 @@ include_directories(${LUABIND_INCLUDE_DIRS})
 find_package(Box2D REQUIRED)
 include_directories(${BOX2D_INCLUDE_DIRS})
 
+find_package(Lua REQUIRED)
+include_directories(${LUA_INCLUDE_DIRS})
+
 install(TARGETS pseudoengine RUNTIME DESTINATION bin)
 
 target_link_libraries(
     pseudoengine
     ${SFML_LIBRARIES}
+		${LUA_LIBRARY}
     ${LUABIND_LIBRARY}
     ${BOX2D_LIBRARY}
     yaml-cpp

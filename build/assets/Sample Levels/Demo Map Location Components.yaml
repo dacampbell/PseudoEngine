@@ -2498,4 +2498,10 @@
 - {angle: 0.0, id: 2497, layer: 0, x: 1504, y: 1568}
 - {angle: 0.0, id: 2498, layer: 0, x: 1536, y: 1568}
 - {angle: 0.0, id: 2499, layer: 0, x: 1568, y: 1568}
-- {angle: 0.0, id: 2500, layer: 1, x: 0, y: 0}
+- {angle: 0.0, id: 2500, layer: 2, x: 0, y: 0}
+- {angle: 0.0, id: 2501, layer: 3, x: 32, y : 32}
+- {angle: 0.0, id: 2502, layer: 1, x: 32, y : 64}
+- {angle: 0.0, id: 2503, layer: 3, x: 96, y : 32}
+- {angle: 0.0, id: 2504, layer: 1, x: 96, y : 64}
+- {angle: 0.0, id: 2505, layer: 3, x: 160, y : 32}
+- {angle: 0.0, id: 2506, layer: 1, x: 160, y : 64}
