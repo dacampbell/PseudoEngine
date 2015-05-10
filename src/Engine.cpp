@@ -11,8 +11,8 @@ void Engine::init() {
 }
 
 void Engine::run() {
-	while(1) {
+	/*while(1) {*/
 		Engine::world->updateWorld();
 		Engine::camera->updateCamera();
-	}
+	/*}*/
 }
