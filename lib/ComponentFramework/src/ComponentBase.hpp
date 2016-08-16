@@ -29,5 +29,23 @@
  *
  * @section DESCRIPTION
  *
- *
+ * This represents a base component for the game engine that all other
+ * components will inherit from.  Each derived component will store the
+ * information needed for the component to run in subsystem that it is speceifed
+ * for.
  */
+
+namespace ComponentFramework
+{
+    class ComponentBase
+    {
+    public:
+        ComponentBase(unsigned int parentId);
+        ~ComponentBase();
+
+        unsigned int GetParentId() const;
+        void SetParentId(const unsigned int& parentId);
+    private:
+        unsigned int parentId;
+    };
+}

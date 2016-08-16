@@ -1,5 +1,5 @@
 /**
- * @file SubsystemBase.hpp
+ * @file Subsystem.hpp
  * @author Duncan Campbell
  * @version 1.0
  *

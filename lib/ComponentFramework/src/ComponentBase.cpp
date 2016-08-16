@@ -29,5 +29,32 @@
  *
  * @section DESCRIPTION
  *
- *
+ * This represents a base component for the game engine that all other
+ * components will inherit from.  Each derived component will store the
+ * information needed for the component to run in subsystem that it is speceifed
  */
+
+#include "ComponentBase.hpp"
+
+using namespace ComponentFramework;
+
+ComponentBase::ComponentBase(unsigned int parentId) :
+    parentId(parentId)
+{
+
+}
+
+ComponentBase::~ComponentBase()
+{
+
+}
+
+unsigned int ComponentBase::GetParentId() const
+{
+    return this->parentId;
+}
+
+void ComponentBase::SetParentId(const unsigned int& parentId)
+{
+    this->parentId = parentId;
+}
