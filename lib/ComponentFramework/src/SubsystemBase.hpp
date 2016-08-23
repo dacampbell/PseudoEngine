@@ -1,5 +1,5 @@
 /**
- * @file SubsystemBase.cpp
+ * @file SubsystemBase.hpp
  * @author Duncan Campbell
  * @version 1.0
  *
@@ -29,5 +29,28 @@
  *
  * @section DESCRIPTION
  *
- *
+ * A subsystem is responsible for updating and tracking a collection of
+ * components.  Subsystems manage things such as rendering, phsyics, and
+ * scripting.
  */
+
+#include <unordered_map>
+
+#include "ComponentBase.hpp"
+
+namespace ComponentFramework
+{
+    class SubsystemBase
+    {
+    public:
+        SubsystemBase();
+        ~SubsystemBase();
+
+        void AddComponent(ComponentBase& component);
+
+        void Update();
+
+    private:
+        std::unordered_map<unsigned int, ComponentBase> managedComponents;
+    };
+}

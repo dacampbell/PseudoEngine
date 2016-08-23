@@ -1,5 +1,5 @@
 /**
- * @file Subsystem.hpp
+ * @file SubsystemBase.cpp
  * @author Duncan Campbell
  * @version 1.0
  *
@@ -29,5 +29,9 @@
  *
  * @section DESCRIPTION
  *
- *
+ * A subsystem is responsible for updating and tracking a collection of
+ * components.  Subsystems manage things such as rendering, phsyics, and
+ * scripting.
  */
+
+#include "SubsystemBase.hpp"
