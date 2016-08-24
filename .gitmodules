@@ -7,3 +7,6 @@
 [submodule "lib/json"]
 	path = lib/json
 	url = https://github.com/nlohmann/json
+[submodule "lib/ChaiScript"]
+	path = lib/ChaiScript
+	url = https://github.com/ChaiScript/ChaiScript
