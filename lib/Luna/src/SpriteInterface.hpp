@@ -31,3 +31,11 @@
  *
  *
  */
+
+namespace Luna
+{
+    class SpriteInterface
+    {
+
+    };
+}
